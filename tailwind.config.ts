@@ -9,12 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "dark-shape-pattern": "url('/background-dark.svg')",
+        "light-shape-pattern": "url('/background-light.svg')",
+        'iplocator': "url('/projects/iplocator.png')",
+        'gomoku': "url('/projects/gomoku.png')",
+        'sokoban': "url('/projects/sokoban.png')",
+        'stakeirb': "url('/projects/stakeirb.png')",
+        'website': "url('/projects/website.png')",
+        'superseries': "url('/projects/superseries.png')",
+        'formcreator': "url('/projects/formcreator.png')",
       },
+    },
+    fontFamily: {
+      body: "league-spartan, sans-serif",
     },
   },
   plugins: [],
+  darkMode: "class",
 };
 export default config;
