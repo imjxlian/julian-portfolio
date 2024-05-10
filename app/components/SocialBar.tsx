@@ -19,7 +19,9 @@ export default function SocialBar({ title }: { title?: string | null }) {
         />
         <SocialButton
           icon={<LinkedInIcon />}
-          onClick={() => handleSocialClick("https://x.com/7jxlian7/")}
+          onClick={() =>
+            handleSocialClick("https://www.linkedin.com/in/julianforme/")
+          }
           className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden font-semibold text-neutral-900 dark:text-white rounded-full group bg-gradient-to-r from-amber-500 to-emerald-500 group-hover:from-rose-500 group-hover:to-amber-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none bg-transparent"
         />
         <SocialButton

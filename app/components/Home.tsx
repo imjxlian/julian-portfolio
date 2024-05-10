@@ -35,7 +35,7 @@ export default function Home() {
           </p>
 
           <div className="flex mb-10">
-            <Link href="/projects">
+            <Link href="https://www.linkedin.com/in/julianforme/">
               <button className="px-5 py-3 mb-2 me-2 overflow-hidden font-semibold text-neutral-900 dark:text-white rounded-lg group bg-gradient-to-r from-rose-500 to-amber-500 flex items-center justify-center gap-2 text-white">
                 {hireMeButtonText}
                 <svg
