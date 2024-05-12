@@ -13,18 +13,18 @@ export default function Home() {
   const followMeTitle = "Follow me";
 
   return (
-    <div className="flex justify-between items-start my-auto">
+    <div className="flex flex-col text-center items-center lg:flex-row lg:justify-between lg:items-start lg:my-auto lg:text-left">
       <div>
         <h2 className="text-6xl font-medium mb-3">{mainTitle}</h2>
 
         <div className="flex flex-col flex-wrap w-min">
-          <h2 className="text-6xl font-semibold text-nowrap mb-4">
+          <h2 className="text-6xl font-semibold md:text-nowrap mb-4">
             {subTitle}{" "}
-            <span className="bg-gradient-to-r from-rose-500 to-amber-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-rose-500 to-amber-500 text-transparent bg-clip-text text-nowrap">
               Julian Forme
             </span>
           </h2>
-          <div className="flex justify-between items-center gap-5">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-5">
             <div className="bg-gradient-to-r from-rose-500 to-amber-500 h-1 w-full"></div>
             <p className="text-2xl font-light text-nowrap">Software Engineer</p>
           </div>
@@ -34,7 +34,7 @@ export default function Home() {
             I am constantly seeking new challenges and growth opportunities.
           </p>
 
-          <div className="flex mb-10">
+          <div className="flex mb-10 mx-auto lg:mx-0">
             <Link href="https://www.linkedin.com/in/julianforme/">
               <button className="px-5 py-3 mb-2 me-2 overflow-hidden font-semibold text-neutral-900 dark:text-white rounded-lg group bg-gradient-to-r from-rose-500 to-amber-500 flex items-center justify-center gap-2 text-white">
                 {hireMeButtonText}
@@ -67,7 +67,7 @@ export default function Home() {
           <SocialBar title={followMeTitle} />
         </div>
       </div>
-      <div className="w-1/3">
+      <div className="lg:w-1/3 lg:block hidden">
         <Image src={BackgroundImage} alt="Julian Forme" />
       </div>
     </div>

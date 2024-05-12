@@ -11,7 +11,7 @@ export default function SocialBar({ title }: { title?: string | null }) {
   return (
     <>
       {title ? <h2 className="text-xl font-semibold mb-3">{title}</h2> : null}
-      <div className="flex gap-5">
+      <div className="flex gap-5 mx-auto lg:mx-0">
         <SocialButton
           icon={<GitHubIcon />}
           onClick={() => handleSocialClick("https://github.com/imjxlian/")}

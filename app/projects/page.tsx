@@ -80,7 +80,7 @@ export default function Portfolio() {
           My Projects
         </span>
       </h2>
-      <div className="grid grid-flow-row grid-cols-2 gap-5">
+      <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}

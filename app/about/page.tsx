@@ -159,7 +159,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between items-start gap-24 py-10">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-20 md:gap-24 py-10">
         <ExperienceSection title="Education" items={education} />
         <ExperienceSection title="Work Experience" items={workExperience} />
       </div>
