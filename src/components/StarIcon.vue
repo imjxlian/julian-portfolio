@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 
-const props = defineProps({
+defineProps({
   count: {
     type: Number,
     required: true,

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-// Define the props for the component
 defineProps({
   skill: {
     type: String,

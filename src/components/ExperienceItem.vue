@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-// Define the props for the component
 defineProps({
   href: {
     type: String,
