@@ -129,7 +129,7 @@ import TestimonyItem from './components/TestimonyItem.vue';
               { href: 'https://github.com/imjxlian/ip-locator', text: 'GitHub' }
             ]" />
           <ProjectCard title="SuperSeries" period="December 2021 - January 2022"
-            description="Développement d'une application web permettant de visualiser les dernières tendances crypto à l'aide d'un dashboard élégant et intuitif. Ce projet scolaire utilise un web scrapper pour récupérer des données du site internet CoinGecko."
+            description="Designed and developed a web application for streaming series, similar to Netflix. This project was completed in collaboration with a classmate during my Computer Science degree program. Our goal was to create a user-friendly platform that allows users to browse, search, and watch a variety of series, showcasing our skills in web development and teamwork."
             imageSrc="/assets/superseries.jpg" imageAlt="SuperSeries"
             projectHref="https://github.com/imjxlian/SuperSeries"
             :technologies="['PHP', 'Symfony', 'MySQL', 'PhpMyAdmin', 'Doctrine']" :socialLinks="[
