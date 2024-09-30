@@ -3,7 +3,7 @@
   <div
     class="rounded-lg bg-white text-dark border-gray-200 shadow-sm flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
     <a :href="projectHref">
-      <img :src="imageSrc" :alt="imageAlt" class="full h-full" />
+      <img :src="imageSrc" :alt="imageAlt" class="w-full h-full" />
     </a>
     <div class="flex flex-col space-y-1.5 p-6 px-3">
       <h3 class="font-semibold tracking-tight mt-1 text-base">{{ title }}</h3>
