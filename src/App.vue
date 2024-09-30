@@ -15,7 +15,7 @@ import TestimonyItem from './components/TestimonyItem.vue';
         </div>
         <div class="group">
           <span class="relative flex shrink-0 overflow-hidden rounded-full size-32 border">
-            <img src="/src/assets/memoji-julian.jpg" alt="Julian Forme"
+            <img src="/assets/memoji-julian.jpg" alt="Julian Forme"
               class="aspect-square w-full h-full transition-all duration-200 [transform-style:preserve-3d] group-hover:scale-x-[-1]" />
           </span>
         </div>
@@ -36,32 +36,32 @@ import TestimonyItem from './components/TestimonyItem.vue';
     <section id="experience">
       <div class="flex flex-col gap-y-3">
         <h2 class="text-xl font-bold">Professional experience</h2>
-        <ExperienceItem href="https://orange.com" logoSrc="/src/assets/orange.png" companyName="Orange DTSI/SI"
+        <ExperienceItem href="https://orange.com" logoSrc="/assets/orange.png" companyName="Orange DTSI/SI"
           period="2022 - Now" role="Intern • Apprenticeship • Software engineer" />
         <ExperienceItem href="https://sejours-linguistiques-volontariat.fr/mission-volontariat/fr/"
-          logoSrc="/src/assets/svi.png" companyName="International Volunteer Service (Belgium)" period="2023"
+          logoSrc="/assets/svi.png" companyName="International Volunteer Service (Belgium)" period="2023"
           role="Intern • Full-stack developer" />
       </div>
     </section>
     <section id="education">
       <div class="flex flex-col gap-y-3">
         <h2 class="text-xl font-bold">Education</h2>
-        <ExperienceItem href="https://enseirb-matmeca.bordeaux-inp.fr/fr" logoSrc="/src/assets/enseirb.jpeg"
+        <ExperienceItem href="https://enseirb-matmeca.bordeaux-inp.fr/fr" logoSrc="/assets/enseirb.jpeg"
           companyName="ENSEIRB-MATMECA" period="2022 - Now"
           role="Master’s Degree in Network and Computer Engineering" />
-        <ExperienceItem href="https://www.iut.u-bordeaux.fr/info/" logoSrc="/src/assets/iut.jpg"
+        <ExperienceItem href="https://www.iut.u-bordeaux.fr/info/" logoSrc="/assets/iut.jpg"
           companyName="Computer Science UIT" period="2020 - 2022"
           role="Two-year University Degree in Computer Science (3rd/70)" />
-        <ExperienceItem href="http://www.citescolaireriberac.com/" logoSrc="/src/assets/lycee.jpg"
+        <ExperienceItem href="http://www.citescolaireriberac.com/" logoSrc="/assets/lycee.jpg"
           companyName="Arnaud Daniel High School" period="2017 - 2020" role="Scientific Baccalaureate with honors" />
       </div>
     </section>
     <section id="languages">
       <div class="flex flex-col gap-y-3">
         <h2 class="text-xl font-bold">Languages</h2>
-        <ExperienceItem href="https://en.wikipedia.org/wiki/English_language" logoSrc="/src/assets/english.jpg"
+        <ExperienceItem href="https://en.wikipedia.org/wiki/English_language" logoSrc="/assets/english.jpg"
           companyName="English" period="C1 level" />
-        <ExperienceItem href="https://en.wikipedia.org/wiki/Spanish_language" logoSrc="/src/assets/spain.jpg"
+        <ExperienceItem href="https://en.wikipedia.org/wiki/Spanish_language" logoSrc="/assets/spain.jpg"
           companyName="Spanish" period="B1 level" />
       </div>
     </section>
@@ -110,7 +110,7 @@ import TestimonyItem from './components/TestimonyItem.vue';
         <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
           <ProjectCard title="NightPass" period="August 2024 - Now"
             description="Design, development, and maintenance of a mobile app for booking reservations at bars and nightclubs, offering users exclusive deals. This project was created with friends to enhance the nightlife experience by simplifying the booking process."
-            imageSrc="/src/assets/nightpass.jpg" imageAlt="NightPass"
+            imageSrc="/assets/nightpass.jpg" imageAlt="NightPass"
             projectHref="https://github.com/imjxlian/night-pass-app"
             :technologies="['React Native', 'AdonisJS', 'PostgreSQL', 'TailwindCSS', 'Expo', 'Typescript']"
             :socialLinks="[
@@ -118,20 +118,19 @@ import TestimonyItem from './components/TestimonyItem.vue';
             ]" />
           <ProjectCard title="Stak'Eirb" period="October 2023 - December 2023"
             description="Designed and developed a web application that replicates an online casino platform, working closely with a classmate as part of a school project. The project involved implementing key features such as user registration, games simulation, and interactive interfaces to provide an engaging user experience."
-            imageSrc="/src/assets/stakeirb.jpg" imageAlt="Stakeirb" projectHref="https://github.com/imjxlian/stakeirb"
+            imageSrc="/assets/stakeirb.jpg" imageAlt="Stakeirb" projectHref="https://github.com/imjxlian/stakeirb"
             :technologies="['Node.js', 'Vue.js', 'Socket.io', 'Express', 'SQLite', 'Javascript']" :socialLinks="[
               { href: 'https://github.com/imjxlian/stakeirb', text: 'GitHub' }
             ]" />
           <ProjectCard title="IP Locator" period="April 2024"
             description="Developed a web application that pinpoints the geographic location of an IP address. Built using JavaScript and several key dependencies, this tool provides users with accurate location data while integrating APIs to enhance its functionality."
-            imageSrc="/src/assets/iplocator.jpg" imageAlt="IP Locator"
-            projectHref="https://github.com/imjxlian/ip-locator"
+            imageSrc="/assets/iplocator.jpg" imageAlt="IP Locator" projectHref="https://github.com/imjxlian/ip-locator"
             :technologies="['Node.js', 'Vue.js', 'Express', 'MongoDB', 'Swagger', 'Javascript']" :socialLinks="[
               { href: 'https://github.com/imjxlian/ip-locator', text: 'GitHub' }
             ]" />
           <ProjectCard title="SuperSeries" period="December 2021 - January 2022"
             description="Développement d'une application web permettant de visualiser les dernières tendances crypto à l'aide d'un dashboard élégant et intuitif. Ce projet scolaire utilise un web scrapper pour récupérer des données du site internet CoinGecko."
-            imageSrc="/src/assets/superseries.jpg" imageAlt="SuperSeries"
+            imageSrc="/assets/superseries.jpg" imageAlt="SuperSeries"
             projectHref="https://github.com/imjxlian/SuperSeries"
             :technologies="['PHP', 'Symfony', 'MySQL', 'PhpMyAdmin', 'Doctrine']" :socialLinks="[
               { href: 'https://github.com/imjxlian/SuperSeries/', text: 'GitHub' }
