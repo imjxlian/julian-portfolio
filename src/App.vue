@@ -11,7 +11,7 @@ import TestimonyItem from './components/TestimonyItem.vue';
       <div class="flex flex-row gap-2 justify-between">
         <div class="flex flex-col flex-1 items-start justify-start space-y-1.5">
           <span class="inline-block text-3xl font-bold tracking-tight sm:text-5xl xl:text-6xl/none">Julian Forme</span>
-          <span class="inline-block md:text-xl">Full-stack developer & project manager.</span>
+          <span class="inline-block md:text-xl">Software engineer & project manager.</span>
         </div>
         <div class="group">
           <span class="relative flex shrink-0 overflow-hidden rounded-full size-32 border">
@@ -26,7 +26,7 @@ import TestimonyItem from './components/TestimonyItem.vue';
         <h2 class="text-xl font-bold">About me</h2>
         <div class="prose max-w-full text-pretty font-sans text-sm text-neutral-500 dark:prose-invert">
           <p>
-            I'm a full-stack developer and project manager with a passion for creating and managing digital products.
+            I'm a software engineer and project manager with a passion for creating and managing digital products.
             I have a strong background in web development, and I'm always looking for new challenges and opportunities
             to learn.
           </p>
