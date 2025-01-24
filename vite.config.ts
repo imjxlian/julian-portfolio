@@ -10,4 +10,10 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
+  optimizeDeps: {
+    exclude: ["oh-vue-icons/icons"],
+  },
+  ssr: {
+    noExternal: ["oh-vue-icons"],
+  },
 });
