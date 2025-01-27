@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.1.0",
     "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.4.37"
   },
