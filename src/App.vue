@@ -5,6 +5,26 @@ import SkillItem from "./components/SkillItem.vue";
 import TestimonyItem from "./components/TestimonyItem.vue";
 import { SpeedInsights } from "@vercel/speed-insights/vue";
 import { Analytics } from "@vercel/analytics/vue";
+
+import { onMounted } from "vue";
+
+onMounted(() => {
+    const observerOptions = {
+        threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".fade-in-section").forEach((section) => {
+        observer.observe(section);
+    });
+});
 </script>
 
 <template>
@@ -13,7 +33,7 @@ import { Analytics } from "@vercel/analytics/vue";
     <main
         class="min-h-screen flex flex-col space-y-10 max-w-2xl mx-auto py-12 sm:py-24 px-6 antialised font-sans"
     >
-        <section id="heading">
+        <section id="heading" class="fade-in-section">
             <div class="flex flex-row gap-2 justify-between">
                 <div
                     class="flex flex-col flex-1 items-start justify-start space-y-1.5"
@@ -80,7 +100,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 </div>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="fade-in-section">
             <div class="flex flex-col">
                 <h2 class="text-xl font-bold">About me</h2>
                 <div
@@ -96,7 +116,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 </div>
             </div>
         </section>
-        <section id="experience">
+        <section id="experience" class="fade-in-section">
             <div class="flex flex-col gap-y-3">
                 <h2 class="text-xl font-bold">Professional experience</h2>
                 <ExperienceItem
@@ -115,7 +135,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 />
             </div>
         </section>
-        <section id="education">
+        <section id="education" class="fade-in-section">
             <div class="flex flex-col gap-y-3">
                 <h2 class="text-xl font-bold">Education</h2>
                 <ExperienceItem
@@ -141,7 +161,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 />
             </div>
         </section>
-        <section id="languages">
+        <section id="languages" class="fade-in-section">
             <div class="flex flex-col gap-y-3">
                 <h2 class="text-xl font-bold">Languages</h2>
                 <ExperienceItem
@@ -158,7 +178,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 />
             </div>
         </section>
-        <section id="skills">
+        <section id="skills" class="fade-in-section">
             <div class="flex flex-col gap-y-3">
                 <h2 class="text-xl font-bold">Technical skills</h2>
                 <div class="flex flex-wrap gap-1">
@@ -196,7 +216,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 >
             </div>
         </section>
-        <section id="projects">
+        <section id="projects" class="fade-in-section">
             <div class="space-y-12 w-full py-12">
                 <div
                     class="flex flex-col items-center justify-center space-y-2 text-center"
@@ -305,7 +325,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 </div>
             </div>
         </section>
-        <section id="testimonials">
+        <section id="testimonials" class="fade-in-section">
             <div class="space-y-12 w-full pb-12">
                 <div
                     class="flex flex-col items-center justify-center space-y-2 text-center"
@@ -326,7 +346,7 @@ import { Analytics } from "@vercel/analytics/vue";
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="fade-in-section">
             <div class="space-y-12 w-full pb-12">
                 <div
                     class="flex flex-col items-center justify-center space-y-2 text-center"
@@ -357,4 +377,44 @@ import { Analytics } from "@vercel/analytics/vue";
     </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Délais pour chaque section */
+#heading.fade-in-section {
+    transition-delay: 0s;
+}
+#about.fade-in-section {
+    transition-delay: 0.2s;
+}
+#experience.fade-in-section {
+    transition-delay: 0.4s;
+}
+#education.fade-in-section {
+    transition-delay: 0.6s;
+}
+#languages.fade-in-section {
+    transition-delay: 0.8s;
+}
+#skills.fade-in-section {
+    transition-delay: 1s;
+}
+#projects.fade-in-section {
+    transition-delay: 1.2s;
+}
+#testimonials.fade-in-section {
+    transition-delay: 1.4s;
+}
+#contact.fade-in-section {
+    transition-delay: 1.6s;
+}
+</style>
