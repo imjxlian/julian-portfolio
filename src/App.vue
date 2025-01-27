@@ -12,6 +12,17 @@ import TestimonyItem from './components/TestimonyItem.vue';
         <div class="flex flex-col flex-1 items-start justify-start space-y-1.5">
           <span class="inline-block text-3xl font-bold tracking-tight sm:text-5xl xl:text-6xl/none">Julian Forme</span>
           <span class="inline-block md:text-xl">Software engineer & project manager.</span>
+          <div class="flex flex-row gap-2 justify-between">
+            <a href="https://www.linkedin.com/in/julianforme/" target="_blank" rel="noopener noreferrer">
+              <v-icon name="co-linkedin-in" fill="#000" scale="1.5" hover="true" animation="wrench" />
+            </a>
+            <a href="https://github.com/imjxlian/" target="_blank" rel="noopener noreferrer">
+              <v-icon name="bi-github" fill="#000" scale="1.5" hover="true" animation="wrench" />
+            </a>
+            <a href="https://www.root-me.org/imjxlian?lang=fr" target="_blank" rel="noopener noreferrer">
+              <v-icon name="gi-skull-crack" fill="#000" scale="1.5" hover="true" animation="wrench" />
+            </a>
+          </div>
         </div>
         <div class="group">
           <span class="relative flex shrink-0 overflow-hidden rounded-full size-32 border">
