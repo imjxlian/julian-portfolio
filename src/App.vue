@@ -80,12 +80,14 @@ import TestimonyItem from './components/TestimonyItem.vue';
           <SkillItem skill="Symfony" />
           <SkillItem skill="Javascript" />
           <SkillItem skill="Typescript" />
+          <SkillItem skill="HTML5" />
+          <SkillItem skill="CSS3" />
           <SkillItem skill="PHP" />
           <SkillItem skill="Java" />
           <SkillItem skill="C" />
+          <SkillItem skill="Bash" />
           <SkillItem skill="Python" />
-          <SkillItem skill="HTML5" />
-          <SkillItem skill="CSS3" />
+          <SkillItem skill="Solidity" />
           <SkillItem skill="MySQL" />
           <SkillItem skill="MongoDB" />
           <SkillItem skill="PostgreSQL" />
@@ -93,6 +95,7 @@ import TestimonyItem from './components/TestimonyItem.vue';
           <SkillItem skill="Git" />
           <SkillItem skill="GitLab CI/CD" />
           <SkillItem skill="Docker" />
+          <SkillItem skill="WordPress" />
           <SkillItem skill="Swagger" />
         </div>
         <span class="text-neutral-500 text-xs">and more to come...</span>
