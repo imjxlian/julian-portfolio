@@ -4,6 +4,7 @@ import ExperienceItem from "./components/ExperienceItem.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import SkillItem from "./components/SkillItem.vue";
 import TestimonyItem from "./components/TestimonyItem.vue";
+import { Analytics } from "@vercel/analytics/vue";
 </script>
 
 <template>
@@ -352,6 +353,7 @@ import TestimonyItem from "./components/TestimonyItem.vue";
             </div>
         </section>
         <SpeedInsights />
+        <Analytics />
     </main>
 </template>
 
