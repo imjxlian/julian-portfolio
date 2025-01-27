@@ -8,6 +8,8 @@ import { Analytics } from "@vercel/analytics/vue";
 </script>
 
 <template>
+    <SpeedInsights />
+    <Analytics />
     <main
         class="min-h-screen flex flex-col space-y-10 max-w-2xl mx-auto py-12 sm:py-24 px-6 antialised font-sans"
     >
@@ -352,8 +354,6 @@ import { Analytics } from "@vercel/analytics/vue";
                 </div>
             </div>
         </section>
-        <SpeedInsights />
-        <Analytics />
     </main>
 </template>
 
