@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/vue";
 import ExperienceItem from "./components/ExperienceItem.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import SkillItem from "./components/SkillItem.vue";
 import TestimonyItem from "./components/TestimonyItem.vue";
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 import { Analytics } from "@vercel/analytics/vue";
 </script>
 
