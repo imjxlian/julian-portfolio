@@ -264,6 +264,10 @@ onMounted(() => {
                                 href: 'https://github.com/imjxlian/night-pass-app',
                                 text: 'GitHub',
                             },
+                            {
+                                href: 'https://nightpass.fr',
+                                text: 'Site Web',
+                            },
                         ]"
                     />
                     <ProjectCard
