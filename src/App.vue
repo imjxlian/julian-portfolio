@@ -1,12 +1,54 @@
 <script setup lang="ts">
+import { Analytics } from "@vercel/analytics/vue";
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 import ExperienceItem from "./components/ExperienceItem.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import SkillItem from "./components/SkillItem.vue";
 import TestimonyItem from "./components/TestimonyItem.vue";
-import { SpeedInsights } from "@vercel/speed-insights/vue";
-import { Analytics } from "@vercel/analytics/vue";
 
-import { onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
+
+const searchedSkill = ref("");
+
+const skills = [
+    "React Native",
+    "React",
+    "Angular",
+    "Node.js",
+    "Vue.js",
+    "AdonisJS",
+    "Spring",
+    "Spring Boot",
+    "Symfony",
+    "Javascript",
+    "Typescript",
+    "HTML5",
+    "CSS3",
+    "TailwindCSS",
+    "Bootstrap",
+    "PHP",
+    "Java",
+    "C",
+    "Bash",
+    "Python",
+    "Solidity",
+    "MySQL",
+    "MongoDB",
+    "PostgreSQL",
+    "MariaDB",
+    "Git",
+    "GitLab CI/CD",
+    "Docker",
+    "WordPress",
+    "Elementor",
+    "Swagger",
+];
+
+const filteredSkills = computed(() => {
+    return skills.filter((skill) =>
+        skill.toLowerCase().includes(searchedSkill.value.toLowerCase())
+    );
+});
 
 onMounted(() => {
     const observerOptions = {
@@ -189,36 +231,21 @@ onMounted(() => {
         </section>
         <section id="skills" class="fade-in-section">
             <div class="flex flex-col gap-y-3">
-                <h2 class="text-xl font-bold">Technical skills</h2>
+                <div class="flex flex-row justify-between items-center">
+                    <h2 class="text-xl font-bold">Technical skills</h2>
+                    <input
+                        type="text"
+                        v-model="searchedSkill"
+                        class="w-1/3 px-2 border rounded-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:border-transparent"
+                        placeholder="Search for a skill"
+                    />
+                </div>
                 <div class="flex flex-wrap gap-1">
-                    <SkillItem skill="React Native" />
-                    <SkillItem skill="React" />
-                    <SkillItem skill="Angular" />
-                    <SkillItem skill="Node.js" />
-                    <SkillItem skill="Vue.js" />
-                    <SkillItem skill="AdonisJS" />
-                    <SkillItem skill="Spring" />
-                    <SkillItem skill="Spring Boot" />
-                    <SkillItem skill="Symfony" />
-                    <SkillItem skill="Javascript" />
-                    <SkillItem skill="Typescript" />
-                    <SkillItem skill="HTML5" />
-                    <SkillItem skill="CSS3" />
-                    <SkillItem skill="PHP" />
-                    <SkillItem skill="Java" />
-                    <SkillItem skill="C" />
-                    <SkillItem skill="Bash" />
-                    <SkillItem skill="Python" />
-                    <SkillItem skill="Solidity" />
-                    <SkillItem skill="MySQL" />
-                    <SkillItem skill="MongoDB" />
-                    <SkillItem skill="PostgreSQL" />
-                    <SkillItem skill="MariaDB" />
-                    <SkillItem skill="Git" />
-                    <SkillItem skill="GitLab CI/CD" />
-                    <SkillItem skill="Docker" />
-                    <SkillItem skill="WordPress" />
-                    <SkillItem skill="Swagger" />
+                    <SkillItem
+                        v-for="skill in filteredSkills"
+                        :key="skill"
+                        :skill="skill"
+                    />
                 </div>
                 <span class="text-neutral-500 text-xs"
                     >and more to come...</span
@@ -247,10 +274,10 @@ onMounted(() => {
                     <ProjectCard
                         title="NightPass"
                         period="August 2024 - Now"
-                        description="Design, development, and maintenance of a mobile app for booking reservations at bars and nightclubs, offering users exclusive deals. This project was created with friends to enhance the nightlife experience by simplifying the booking process."
+                        description="I fully developed the website for the project and designed the mobile application. I also closely follow the project with the developers to ensure its smooth progress and alignment with the initial vision."
                         imageSrc="/assets/nightpass.jpg"
                         imageAlt="NightPass"
-                        projectHref="https://github.com/imjxlian/night-pass-app"
+                        projectHref="https://download.nightpass.fr"
                         :technologies="[
                             'React Native',
                             'AdonisJS',
@@ -258,15 +285,17 @@ onMounted(() => {
                             'TailwindCSS',
                             'Expo',
                             'Typescript',
+                            'Elementor',
+                            'WordPress',
                         ]"
                         :socialLinks="[
                             {
-                                href: 'https://github.com/imjxlian/night-pass-app',
-                                text: 'GitHub',
+                                href: 'https://download.nightpass.fr',
+                                text: 'App',
                             },
                             {
                                 href: 'https://nightpass.fr',
-                                text: 'Site Web',
+                                text: 'Website',
                             },
                         ]"
                     />
@@ -355,6 +384,12 @@ onMounted(() => {
                         :starCount="5"
                         author="Jules Royet"
                         role="Classmate & Colleague"
+                    />
+                    <TestimonyItem
+                        testimony="Working with Julian is a real pleasure. He is a quick learner and a highly talented developer with a true engineering mindset. Always ready to help and share his knowledge, he brings great value to any team. I highly recommend him for any project."
+                        :starCount="5"
+                        author="Anonymous"
+                        role="Orange Colleague"
                     />
                 </div>
             </div>
