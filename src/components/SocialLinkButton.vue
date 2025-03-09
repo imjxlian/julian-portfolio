@@ -1,4 +1,3 @@
-<!-- src/components/SocialLinkButton.vue -->
 <template>
   <a :href="href" target="_blank" rel="noopener noreferrer">
     <div
@@ -21,5 +20,3 @@ defineProps({
   },
 });
 </script>
-
-<style scoped></style>

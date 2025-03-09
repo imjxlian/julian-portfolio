@@ -1,4 +1,3 @@
-<!-- src/components/ProjectCard.vue -->
 <template>
   <div
     class="rounded-lg bg-white text-dark border-gray-200 shadow-sm flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
@@ -61,5 +60,3 @@ defineProps({
   },
 });
 </script>
-
-<style scoped></style>

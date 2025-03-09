@@ -14,7 +14,3 @@ defineProps({
     <span>{{ techno }}</span>
   </div>
 </template>
-
-<style scoped>
-/* Add any specific styles for ExperienceItem here */
-</style>

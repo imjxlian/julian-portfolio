@@ -7,6 +7,17 @@ import SkillItem from "./components/SkillItem.vue";
 import TestimonyItem from "./components/TestimonyItem.vue";
 
 import { computed, onMounted, ref } from "vue";
+import EmojiEffect from "./components/EmojiEffect.vue";
+
+const showEmojis = ref(false);
+
+const triggerAnimation = () => {
+    console.log(showEmojis.value);
+    if (!showEmojis.value) {
+        showEmojis.value = true;
+        setTimeout(() => (showEmojis.value = false), 6000);
+    }
+};
 
 const searchedSkill = ref("");
 
@@ -67,7 +78,6 @@ onMounted(() => {
         observer.observe(section);
     });
 
-    // Ajouter un attribut au body après le premier scroll
     window.addEventListener(
         "scroll",
         () => {
@@ -81,6 +91,7 @@ onMounted(() => {
 <template>
     <SpeedInsights />
     <Analytics />
+    <EmojiEffect :isActive="showEmojis" />
     <main
         class="min-h-screen flex flex-col space-y-10 max-w-2xl mx-auto py-12 sm:py-24 px-6 antialised font-sans"
     >
@@ -138,14 +149,14 @@ onMounted(() => {
                         </a>
                     </div>
                 </div>
-                <div class="group">
+                <div class="group" @mouseenter="triggerAnimation">
                     <span
                         class="relative flex shrink-0 overflow-hidden rounded-full size-32 border"
                     >
                         <img
                             src="/assets/memoji-julian.jpg"
                             alt="Julian Forme"
-                            class="aspect-square w-full h-full transition-all duration-200 [transform-style:preserve-3d] group-hover:scale-x-[-1]"
+                            class="aspect-square w-full h-full transition-all duration-200 transform group-hover:scale-x-[-1]"
                         />
                     </span>
                 </div>

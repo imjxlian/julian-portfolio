@@ -14,7 +14,3 @@ defineProps({
     <span>{{ skill }}</span>
   </div>
 </template>
-
-<style scoped>
-/* Add any specific styles for ExperienceItem here */
-</style>
