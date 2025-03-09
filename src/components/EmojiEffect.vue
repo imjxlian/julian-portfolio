@@ -9,7 +9,7 @@ interface EmojiItem {
 
 const props = defineProps<{ isActive: boolean }>();
 
-const emojiList = "😄😋🥳👋🏻🤩🤖👾👀🔥🌍☘️🌦️🥇🎯🎉🚀💻🎓📚🎈";
+const emojiList = "😄😋🥳🤩🤖👾👀🔥🌍☘️🌦️🥇🎯🎉🚀💻🎓📚🎈";
 const emojiNumber = 200;
 const emojis = ref<EmojiItem[]>([]);
 const isPlaying = ref(false);
@@ -65,7 +65,7 @@ watch(
             :style="{
                 fontSize: getFontSize(),
                 animationDuration: getAnimationDuration(),
-                left: item.left,
+                left: `${parseFloat(item.left) - (parseFloat(getFontSize()) / 2)}%`,
                 transform: `translateY(${item.startY})`,
             }"
         >

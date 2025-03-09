@@ -12,7 +12,6 @@ import EmojiEffect from "./components/EmojiEffect.vue";
 const showEmojis = ref(false);
 
 const triggerAnimation = () => {
-    console.log(showEmojis.value);
     if (!showEmojis.value) {
         showEmojis.value = true;
         setTimeout(() => (showEmojis.value = false), 6000);
@@ -117,7 +116,7 @@ onMounted(() => {
                                 name="co-linkedin-in"
                                 fill="#000"
                                 scale="1.5"
-                                hover="true"
+                                :hover="true"
                                 animation="wrench"
                             />
                         </a>
@@ -130,7 +129,7 @@ onMounted(() => {
                                 name="bi-github"
                                 fill="#000"
                                 scale="1.5"
-                                hover="true"
+                                :hover="true"
                                 animation="wrench"
                             />
                         </a>
@@ -143,7 +142,7 @@ onMounted(() => {
                                 name="gi-skull-crack"
                                 fill="#000"
                                 scale="1.5"
-                                hover="true"
+                                :hover="true"
                                 animation="wrench"
                             />
                         </a>
