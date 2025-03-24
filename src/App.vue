@@ -52,6 +52,9 @@ const skills = [
     "WordPress",
     "Elementor",
     "Swagger",
+    "n8n",
+    "Zend Framework 2",
+    "Laminas",
 ];
 
 const filteredSkills = computed(() => {
