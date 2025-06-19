@@ -10,12 +10,21 @@ import { computed, onMounted, ref } from "vue";
 import EmojiEffect from "./components/EmojiEffect.vue";
 
 const showEmojis = ref(false);
+const scrollProgress = ref(0);
 
 const triggerAnimation = () => {
     if (!showEmojis.value) {
         showEmojis.value = true;
         setTimeout(() => (showEmojis.value = false), 6000);
     }
+};
+
+const updateScrollProgress = () => {
+    const scrollTop = window.pageYOffset;
+    const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollProgress.value = scrollPercent;
 };
 
 const searchedSkill = ref("");
@@ -85,6 +94,8 @@ onMounted(() => {
         observer.observe(section);
     });
 
+    window.addEventListener("scroll", updateScrollProgress);
+
     window.addEventListener(
         "scroll",
         () => {
@@ -99,6 +110,15 @@ onMounted(() => {
     <SpeedInsights />
     <Analytics />
     <EmojiEffect :isActive="showEmojis" />
+    <div class="fixed top-0 left-0 w-full h-2 bg-gray-200 z-50">
+        <div
+            class="h-full bg-gradient-to-r from-blue-400 via-purple-400 to-red-400 transition-all duration-150 ease-out"
+            :style="{
+                width: '100%',
+                clipPath: `inset(0 ${100 - scrollProgress}% 0 0)`,
+            }"
+        ></div>
+    </div>
     <main
         class="min-h-screen flex flex-col space-y-10 max-w-2xl mx-auto py-12 sm:py-24 px-6 antialised font-sans"
     >
