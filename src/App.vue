@@ -55,6 +55,11 @@ const skills = [
     "n8n",
     "Zend Framework 2",
     "Laminas",
+    "Web3.js",
+    "Socket.io",
+    "Prisma",
+    "Express",
+    "Vite",
 ];
 
 const filteredSkills = computed(() => {
@@ -162,6 +167,17 @@ onMounted(() => {
                         />
                     </span>
                 </div>
+            </div>
+            <div class="flex flex-row items-center justify-start mt-4 gap-2">
+                <div class="relative">
+                    <div class="h-3 w-3 bg-green-500 rounded-full"></div>
+                    <div
+                        class="absolute inset-0 h-3 w-3 bg-green-500 rounded-full animate-ping"
+                    ></div>
+                </div>
+                <span class="text-md font-medium"
+                    >Open to new opportunities for September 2025</span
+                >
             </div>
         </section>
         <section id="about" class="fade-in-section">
@@ -308,6 +324,52 @@ onMounted(() => {
                             },
                             {
                                 href: 'https://nightpass.fr',
+                                text: 'Website',
+                            },
+                        ]"
+                        :badge-text="'NEW'"
+                    />
+                    <ProjectCard
+                        title="StrikEth"
+                        period="Developed in a week (2025) - Vibe coding"
+                        description="Fully developed an interactive online roulette website for fun and experience, integrating blockchain for enhanced transparency and security. Led the web design and closely followed development to ensure alignment with the initial vision."
+                        imageSrc="/assets/striketh.jpg"
+                        imageAlt="StrikEth"
+                        projectHref="https://striketh.com"
+                        :technologies="[
+                            'React',
+                            'Typescript',
+                            'PostgreSQL',
+                            'TailwindCSS',
+                            'Express',
+                            'Socket.io',
+                            'Web3.js',
+                            'Prisma',
+                            'Docker',
+                        ]"
+                        :socialLinks="[
+                            {
+                                href: 'https://striketh.com',
+                                text: 'Website',
+                            },
+                        ]"
+                    />
+                    <ProjectCard
+                        title="Portfolio"
+                        period="January 2025"
+                        description="Presenting my portfolio on my portfolio? Yes! It’s a fun and clean project that showcases what I can do. Built entirely with Vue 3 and Vite on the frontend, styled with TailwindCSS, and enriched with smooth animations."
+                        imageSrc="/assets/portfolio.jpg"
+                        imageAlt="Portfolio Julian"
+                        projectHref="https://jxlian.cloud"
+                        :technologies="[
+                            'Vue.js',
+                            'Vite',
+                            'Typescript',
+                            'TailwindCSS',
+                        ]"
+                        :socialLinks="[
+                            {
+                                href: 'https://jxlian.cloud',
                                 text: 'Website',
                             },
                         ]"
