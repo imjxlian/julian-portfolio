@@ -12,7 +12,7 @@ interface EmojiItem {
 
 const props = defineProps<{ isActive: boolean }>();
 
-const emojiList = "😄😋🥳🤩🤖👾👀🔥🌍☘️🌦️🥇🎯🎉🚀💻🎓📚🎈";
+const emojiList = "😄😋🥳🤩🤖👾👀🔥🌍☘️🥇🎯🎉🚀💻🎓📚🎈";
 const emojiNumber = window.innerWidth > 768 ? 50 : 12;
 const emojis = ref<EmojiItem[]>([]);
 const isPlaying = ref(false);
