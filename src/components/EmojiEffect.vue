@@ -5,7 +5,10 @@ interface EmojiItem {
     emoji: string;
     left: string;
     startY: string;
+    fontSize: string;
+    animationDuration: string;
 }
+
 
 const props = defineProps<{ isActive: boolean }>();
 
@@ -24,28 +27,24 @@ function generateEmojis() {
     const screenHeight = window.innerHeight;
 
     for (let i = 0; i < emojiNumber; i++) {
+        const fontSize = Math.floor(Math.random() * 6) + 1; // de 1 à 6 em
+        const animationDuration = (Math.random() * 4 + 2).toFixed(2); // de 2 à 6s
+
         newEmojis.push({
             emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
             left: `${Math.random() * 100}%`,
             startY: `${screenHeight}px`,
+            fontSize: `${fontSize}em`,
+            animationDuration: `${animationDuration}s`,
         });
     }
 
     emojis.value = newEmojis;
 
-    // Réinitialiser l’animation après 6s
     setTimeout(() => {
         emojis.value = [];
         isPlaying.value = false;
     }, 6000);
-}
-
-function getFontSize() {
-    return `${Math.floor(Math.random() * 6) + 1}em`;
-}
-
-function getAnimationDuration() {
-    return `${(Math.random() * 4 + 2).toFixed(2)}s`;
 }
 
 watch(
@@ -63,11 +62,12 @@ watch(
             :key="index"
             class="emoji-container"
             :style="{
-                fontSize: getFontSize(),
-                animationDuration: getAnimationDuration(),
-                left: `${parseFloat(item.left) - (parseFloat(getFontSize()) / 2)}%`,
+                fontSize: item.fontSize,
+                animationDuration: item.animationDuration,
+                left: `${parseFloat(item.left) - (parseFloat(item.fontSize) / 2)}%`,
                 transform: `translateY(${item.startY})`,
             }"
+
         >
             {{ item.emoji }}
         </div>
