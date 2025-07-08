@@ -220,6 +220,13 @@ onMounted(() => {
             <div class="flex flex-col gap-y-3">
                 <h2 class="text-xl font-bold">Professional experience</h2>
                 <ExperienceItem
+                    href="https://nightpass.fr"
+                    logoSrc="/assets/nightpass-logo.png"
+                    companyName="NightPass"
+                    period="2024 - Now"
+                    role="Freelance/Volunteer • Software engineer"
+                />
+                <ExperienceItem
                     href="https://orange.com"
                     logoSrc="/assets/orange.png"
                     companyName="Orange DTSI/SI"
