@@ -85,46 +85,51 @@ watch(
 
 .emoji-container {
     position: absolute;
-    top: 100vh;
     opacity: 1;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(100vh);
     animation: fiesta ease-in-out;
     animation-fill-mode: forwards;
+    will-change: transform, opacity;
 }
 
 @keyframes fiesta {
     0% {
-        top: 100vh;
+        transform: translateY(100vh) translateX(0%);
         opacity: 1;
     }
-
+    10% {
+        transform: translateY(90vh) translateX(-10%);
+    }
+    20% {
+        transform: translateY(80vh) translateX(10%);
+    }
+    30% {
+        transform: translateY(70vh) translateX(-10%);
+    }
+    40% {
+        transform: translateY(60vh) translateX(10%);
+    }
+    50% {
+        transform: translateY(50vh) translateX(-10%);
+    }
+    60% {
+        transform: translateY(40vh) translateX(10%);
+    }
+    70% {
+        transform: translateY(30vh) translateX(-10%);
+    }
     80% {
+        transform: translateY(20vh) translateX(10%);
         opacity: 0.5;
     }
-
     90% {
+        transform: translateY(10vh) translateX(-10%);
         opacity: 0;
     }
-
     100% {
-        top: 0;
+        transform: translateY(0vh) translateX(0%);
         opacity: 0;
-    }
-
-    /* Mouvement latéral en zigzag */
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-10%);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(10%);
     }
 }
+
 </style>
