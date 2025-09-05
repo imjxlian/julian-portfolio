@@ -350,6 +350,31 @@ onMounted(() => {
                         :badge-text="'NEW'"
                     />
                     <ProjectCard
+                        title="Python Report Generator"
+                        period="September 2025"
+                        description="Developed a modern web application that converts Markdown documents into beautifully formatted PDF reports. The application features a clean, intuitive interface with a live HTML editor for real-time preview and customization."
+                        imageSrc="/assets/python-report-generator.jpg"
+                        imageAlt="Python Report Generator"
+                        projectHref="https://github.com/username/python-report-generator"
+                        :technologies="[
+                            'Python',
+                            'Flask',
+                            'WeasyPrint',
+                            'Markdown',
+                            'HTML5',
+                            'CSS3',
+                            'Javascript',
+                        ]"
+                        :socialLinks="[
+                            {
+                                href: 'https://python-report-generator.jxlian.cloud',
+                                text: 'Live Demo',
+                            },
+                        ]"
+                        :badge-text="'🔥'"
+                    />
+
+                    <ProjectCard
                         title="StrikEth"
                         period="Developed in a week (2025) - Vibe coding"
                         description="Fully developed an interactive online roulette website for fun and experience, integrating blockchain for enhanced transparency and security. Led the web design and closely followed development to ensure alignment with the initial vision."

@@ -3,7 +3,7 @@
         class="relative rounded-lg bg-white text-dark border-gray-200 shadow-sm flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
     >
         <div
-            class="absolute top-6 left-6 w-8 h-24 bg-red-500 rotate-45 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            class="absolute top-6 left-6 w-8 h-28 bg-red-500 rotate-45 transform -translate-x-1/2 -translate-y-1/2 z-10 shadow-[0_10px_15px_rgba(239,68,68,0.5)]"
             v-if="badgeText"
         >
             <div
