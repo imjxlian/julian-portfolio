@@ -5,12 +5,15 @@ interface EmojiItem {
     emoji: string;
     left: string;
     startY: string;
+    fontSize: string;
+    animationDuration: string;
 }
+
 
 const props = defineProps<{ isActive: boolean }>();
 
-const emojiList = "😄😋🥳🤩🤖👾👀🔥🌍☘️🌦️🥇🎯🎉🚀💻🎓📚🎈";
-const emojiNumber = window.innerWidth > 768 ? 200 : 50;
+const emojiList = "😄😋🥳🤩🤖👾👀🔥🌍☘️🥇🎯🎉🚀💻🎓📚🎈";
+const emojiNumber = window.innerWidth > 768 ? 50 : 12;
 const emojis = ref<EmojiItem[]>([]);
 const isPlaying = ref(false);
 
@@ -24,28 +27,24 @@ function generateEmojis() {
     const screenHeight = window.innerHeight;
 
     for (let i = 0; i < emojiNumber; i++) {
+        const fontSize = Math.floor(Math.random() * 6) + 1; // de 1 à 6 em
+        const animationDuration = (Math.random() * 4 + 2).toFixed(2); // de 2 à 6s
+
         newEmojis.push({
             emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
             left: `${Math.random() * 100}%`,
             startY: `${screenHeight}px`,
+            fontSize: `${fontSize}em`,
+            animationDuration: `${animationDuration}s`,
         });
     }
 
     emojis.value = newEmojis;
 
-    // Réinitialiser l’animation après 6s
     setTimeout(() => {
         emojis.value = [];
         isPlaying.value = false;
     }, 6000);
-}
-
-function getFontSize() {
-    return `${Math.floor(Math.random() * 6) + 1}em`;
-}
-
-function getAnimationDuration() {
-    return `${(Math.random() * 4 + 2).toFixed(2)}s`;
 }
 
 watch(
@@ -63,11 +62,12 @@ watch(
             :key="index"
             class="emoji-container"
             :style="{
-                fontSize: getFontSize(),
-                animationDuration: getAnimationDuration(),
-                left: `${parseFloat(item.left) - (parseFloat(getFontSize()) / 2)}%`,
+                fontSize: item.fontSize,
+                animationDuration: item.animationDuration,
+                left: `${parseFloat(item.left) - (parseFloat(item.fontSize) / 2)}%`,
                 transform: `translateY(${item.startY})`,
             }"
+
         >
             {{ item.emoji }}
         </div>
@@ -85,46 +85,51 @@ watch(
 
 .emoji-container {
     position: absolute;
-    top: 100vh;
     opacity: 1;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(100vh);
     animation: fiesta ease-in-out;
     animation-fill-mode: forwards;
+    will-change: transform, opacity;
 }
 
 @keyframes fiesta {
     0% {
-        top: 100vh;
+        transform: translateY(100vh) translateX(0%);
         opacity: 1;
     }
-
+    10% {
+        transform: translateY(90vh) translateX(-10%);
+    }
+    20% {
+        transform: translateY(80vh) translateX(10%);
+    }
+    30% {
+        transform: translateY(70vh) translateX(-10%);
+    }
+    40% {
+        transform: translateY(60vh) translateX(10%);
+    }
+    50% {
+        transform: translateY(50vh) translateX(-10%);
+    }
+    60% {
+        transform: translateY(40vh) translateX(10%);
+    }
+    70% {
+        transform: translateY(30vh) translateX(-10%);
+    }
     80% {
+        transform: translateY(20vh) translateX(10%);
         opacity: 0.5;
     }
-
     90% {
+        transform: translateY(10vh) translateX(-10%);
         opacity: 0;
     }
-
     100% {
-        top: 0;
+        transform: translateY(0vh) translateX(0%);
         opacity: 0;
-    }
-
-    /* Mouvement latéral en zigzag */
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-10%);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(10%);
     }
 }
+
 </style>
