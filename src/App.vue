@@ -362,7 +362,7 @@ onMounted(() => {
                         description="Developed a modern web application that converts Markdown documents into beautifully formatted PDF reports. The application features a clean, intuitive interface with a live HTML editor for real-time preview and customization."
                         imageSrc="/assets/python-report-generator.jpg"
                         imageAlt="Python Report Generator"
-                        projectHref="https://github.com/username/python-report-generator"
+                        projectHref="https://github.com/imjxlian/python-report-generator"
                         :technologies="[
                             'Python',
                             'Flask',
