@@ -196,7 +196,7 @@ onMounted(() => {
                     ></div>
                 </div>
                 <span class="text-md font-medium"
-                    >Open to new opportunities for September 2025</span
+                    >Open to new opportunities for October 2025</span
                 >
             </div>
         </section>
