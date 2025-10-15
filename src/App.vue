@@ -48,6 +48,7 @@ const skills = [
     "PHP",
     "Java",
     "C",
+    "C#",
     "Bash",
     "Python",
     "Solidity",
@@ -56,7 +57,9 @@ const skills = [
     "PostgreSQL",
     "MariaDB",
     "Git",
-    "GitLab CI/CD",
+    "GitLab",
+    "GitHub",
+    "CI/CD",
     "Docker",
     "WordPress",
     "Elementor",
@@ -196,7 +199,7 @@ onMounted(() => {
                     ></div>
                 </div>
                 <span class="text-md font-medium"
-                    >Open to new opportunities for October 2025</span
+                    >Open to new opportunities</span
                 >
             </div>
         </section>
@@ -234,7 +237,7 @@ onMounted(() => {
                     role="Intern • Apprenticeship • Software engineer"
                 />
                 <ExperienceItem
-                    href="https://sejours-linguistiques-volontariat.fr/mission-volontariat/fr/"
+                    href="https://www.servicevolontaire.org/mission-volontariat/fr/"
                     logoSrc="/assets/svi.png"
                     companyName="International Volunteer Service (Belgium)"
                     period="2023"
