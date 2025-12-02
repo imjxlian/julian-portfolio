@@ -72,6 +72,7 @@ const skills = [
     "Prisma",
     "Express",
     "Vite",
+    "Kafka",
 ];
 
 const filteredSkills = computed(() => {
