@@ -224,6 +224,13 @@ onMounted(() => {
             <div class="flex flex-col gap-y-3">
                 <h2 class="text-xl font-bold">Professional experience</h2>
                 <ExperienceItem
+                    href="https://www.cgi.com/en"
+                    logoSrc="/assets/cgi-logo.png"
+                    companyName="CGI Aquitaine - AVL"
+                    period="2025 - Now"
+                    role="Software engineer | IT Developer"
+                />
+                <ExperienceItem
                     href="https://nightpass.fr"
                     logoSrc="/assets/nightpass-logo.png"
                     companyName="NightPass"
@@ -234,7 +241,7 @@ onMounted(() => {
                     href="https://orange.com"
                     logoSrc="/assets/orange.png"
                     companyName="Orange DTSI/SI"
-                    period="2022 - Now"
+                    period="2022 - 2025"
                     role="Intern • Apprenticeship • Software engineer"
                 />
                 <ExperienceItem
@@ -253,7 +260,7 @@ onMounted(() => {
                     href="https://enseirb-matmeca.bordeaux-inp.fr/fr"
                     logoSrc="/assets/enseirb.jpeg"
                     companyName="ENSEIRB-MATMECA"
-                    period="2022 - Now"
+                    period="2022 - 2025"
                     role="Master’s Degree in Network and Computer Engineering"
                 />
                 <ExperienceItem
