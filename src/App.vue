@@ -228,7 +228,7 @@ onMounted(() => {
                     logoSrc="/assets/cgi-logo.png"
                     companyName="CGI Aquitaine - AVL"
                     period="2025 - Now"
-                    role="Software engineer | IT Developer"
+                    role="Software engineer • IT Developer"
                 />
                 <ExperienceItem
                     href="https://nightpass.fr"
