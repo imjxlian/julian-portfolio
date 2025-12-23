@@ -489,7 +489,7 @@ onMounted(() => {
                     <TestimonyItem
                         testimony="Working with Julian is a real pleasure. He is a quick learner and a highly talented developer with a true engineering mindset. Always ready to help and share his knowledge, he brings great value to any team. I highly recommend him for any project."
                         :starCount="5"
-                        author="Anonymous"
+                        author="H.R"
                         role="Orange Colleague"
                     />
                 </div>
